@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>// coding dojo</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="// coding dojo">
+    <meta property="og:description" content="Coding Dojo Sample">
+    <meta property="og:image" content="http://localhost:5000/api/og/14">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="// coding dojo">
+    <meta property="twitter:description" content="Coding Dojo Sample">
+
+    <meta property="twitter:image" content="http://localhost:5000/api/og/14">
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.png" />
+  
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+
+<div class="container">
+
+  <div class="header">
+    <div class="prompt-dot"></div>
+    <div>
+      <div class="header-logo">v1.0.0 — dojo runner</div>
+      <div class="header-title"><span>// </span>coding dojo</div>
+    </div>
+  </div>
+
+  
+  <div id="screen-setup" class="screen active">
+
+    <div class="section">kata</div>
+
+    <div class="field">
+      <div class="field-label">objetivo do kata</div>
+      
+    </div>
+
+    <div class="section">participantes</div>
+
+    <div class="field">
+      <div class="field-label">adicionar participante</div>
+      <div class="add-row">
+        
+        + add
+      </div>
+      <div class="tags-wrap" id="p-tags"></div>
+    </div>
+
+    <div class="section">configuração</div>
+
+    <div class="field">
+      <div class="field-label">duração por turno</div>
+      <div class="num-row">
+        
+        <span>minutos por participante</span>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="field-label">pilot fixo</div>
+      <div class="toggle-row">
+        
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+          <span class="toggle-label" id="toggle-label">desativado</span>
+        
+        <span class="toggle-hint">pilot permanece fixo; apenas o navigator rotaciona</span>
+      </div>
+      <div id="fixed-pilot-select" class="fixed-pilot-hidden">
+        <div style="margin-top:10px">
+          <div class="field-label">selecionar pilot fixo</div>
+          
+            — adicione participantes primeiro —
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      ▶ iniciar kata
+    </div>
+
+  </div>
+
+  
+  <div id="screen-run" class="screen">
+
+    <div class="kata-pill" id="run-kata"></div>
+
+    <div class="queue" id="run-queue"></div>
+
+    <div class="pilot-block">
+      <div class="pilot-label" id="run-pilot-label">pilot</div>
+      <div class="pilot-name" id="run-pilot">—</div>
+      <div class="navigator-label">navigator: <span id="run-nav">—</span></div>
+    </div>
+
+    <div class="progress-track">
+      <div class="progress-fill" id="run-progress"></div>
+    </div>
+
+    <div class="timer-wrap">
+      <div class="timer" id="run-timer">00:00</div>
+      <div class="round-info" id="run-round">round 1 · turno 1 de 1</div>
+    </div>
+
+    <div class="controls">
+      ⏸ pausar
+      skip →
+      encerrar
+    </div>
+
+  </div>
+
+  
+  <div id="screen-done" class="screen">
+
+    <div class="section">sessão encerrada</div>
+
+    <div class="kata-pill" id="done-kata"></div>
+
+    <div class="section">participantes</div>
+
+    <div class="summary-wrap">
+      <table class="summary-table" id="done-table"></table>
+    </div>
+
+    <div class="btn-row">
+      ↺ novo kata
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="overlay" id="overlay">
+  <div class="overlay-bars">
+    <div class="overlay-bar"></div>
+    <div class="overlay-bar"></div>
+    <div class="overlay-bar"></div>
+    <div class="overlay-bar"></div>
+    <div class="overlay-bar"></div>
+    <div class="overlay-bar"></div>
+  </div>
+  <div class="overlay-glitch">TEMPO!</div>
+  <div class="overlay-name" id="overlay-name">turno de <span>—</span> encerrado</div>
+  próximo →
+</div>
+
+
+
+
+</body>
+</html>
